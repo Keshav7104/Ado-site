@@ -7,4 +7,4 @@ events :- Pirated, computex cup, tech talk.
 explore
 register
 social media
-team management
+team management.
