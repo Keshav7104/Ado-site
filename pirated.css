@@ -1,5 +1,10 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
 html{
     height: 100%;
+    width: 100%;
     background-image: url(pirated_asset/pirated.jpeg);
     background-position: fixed;
     background-repeat: no-repeat;
@@ -19,24 +24,74 @@ body {
 .nav a{
     display: inline;
     float: right;
-    padding: 10px;
+    padding: 20px;
 }
-.nav a:hover{
-    background-color: #ffcb9a;
-    color: #d1e8e2;
+.nav a:hover
+    {
+        background: #ffcb9a;
+        color: #116466;
+        transform: translate(0.2em, -0.2em);
+        transition: all 0.25s linear;
+        box-shadow: -1em 1em 0 #d1e8e2;
+      }
+a:hover:before,a:hover:after{
+    transition: all 0.25s linear;
+}
+a:hover:beforea:hover{
+    background: #2c3531;
+    width: 1em;
+    top: 0.5em;
+    left: -1em;
+}
+a:hover:after{
+    background: #2c3531;
+    width: 1em;
+    bottom: -2.5em;
+    left: 1em;
+    height: 4em;
 }
 a{
     background-color: #116466;
     text-decoration: none;
-    color: #ffcb9a;
+    color: #d1e8e2;
     font-size: 30px;
     margin:0px;
+    font-family: Impact, Helvetica, sans-serif;
+    text-align: center;
+    height: 2.5em;
+    width: 6em;
+    line-height: 2.5em;
+    border-bottom: 1px solid #2c3531;
+    position: relative;
+    display: block;
+    box-shadow: -0.5em 0.5em 0 #d9b08b;
+    transition: all 0.25s linear;
+}
+a::before,a::after{
+    position: absolute;
+    transition: all 0.25s linear;
+    width: 0.5em;
+}
+a:before {
+    height: 2.5em;
+    background: #121212;
+    top: 0.25em;
+    left: -0.5em;
+    transform: skewY(-45deg);
+  }
+a::after{
+    height: 4em;
+    background: #181818;
+    bottom: -2.25em;
+    left: 1.5em;
+    transform: rotate(90deg) skew(0, 45deg);
 }
 .logo{
     text-align: center;
     font-size: 100px;
     color: #d1e8e2;
     text-shadow: 10px 10px 10px #116466 ;
+    font-family: Impact, Helvetica, sans-serif;;
 }
 .event{
     color: #d9b08b;
@@ -47,7 +102,7 @@ a{
     animation: event 1s linear;
     animation-fill-mode: forwards;
     font-family: Impact, Helvetica, sans-serif;
-    text-shadow: 10px 10px 5px #d1e8e2 ;
+    text-shadow: 5px 5px 5px #116466 ;
 }
 @keyframes event {
     0% {margin: 20px;font-size:20px;}
@@ -80,6 +135,8 @@ a{
     line-height: normal;
     padding: 30px;
     text-shadow: 5px 5px 10px #116466;
+    letter-spacing: 1px;
+    word-spacing: 5px;
 }
 .bcl{
     border : 5px groove #ffcb9a;
@@ -99,6 +156,8 @@ button{
     text-align: center;
     font-family: Impact, Helvetica, sans-serif;
     font-size: larger;
+    letter-spacing: 1px;
+    word-spacing: 5px;
 }
 .scroll{
     animation: scroll 2s linear infinite;
@@ -110,6 +169,8 @@ h2{
     color: #ffcb9a;
     text-decoration: underline;
     font-family: Impact, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 5px;
 }
 .rules{
     margin: 50px;
@@ -117,10 +178,14 @@ h2{
     font-size: 20px;
     color: #d1e8e2;
     font-family: Impact, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 3px;
 }
 .nav.img2{
     margin: 10px;
     padding: 10px;
+    width: 400px;
+    margin-right: 10px;
 }
 .nav.img{
     padding-right: 20px;
@@ -139,6 +204,8 @@ h2{
     margin-left: 50px;
     font-family: Impact, Helvetica, sans-serif;
     text-align: left;
+    letter-spacing: 1px;
+    word-spacing: 5px;
 }
 .tailb{
     color: #d1e8e2;
@@ -150,6 +217,26 @@ h2{
     color: #116466;
     background-color: #d1e8e2;
     font : Arial;
+}
+.rules li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.rules.p{
+    text-align: center;
+    border-radius: 2px;
+    border-style: solid;
+    border-top: #d1e8e2;
+    border-left: #d1e8e2;
+    border-right: #d1e8e2;
+}
+.nav.last{
+    margin: 50px;
+    padding: 10px;
+    float: left;
+}
+.rules.r{
+    color: powderblue;
 }
 .dis{
     color: transparent;
