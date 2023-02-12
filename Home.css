@@ -60,11 +60,12 @@ p {
     width: 129px;
 }
 .container1{
-    background: url("1232.jpg") no-repeat;
+    background: url("1232.jpg") ;
     background-size: 1300px 1200px;
     height:300px;
     top: -100px;
     position: relative;
+    margin-bottom: 0px;
 }
 .content{
     top: 80px;
@@ -76,11 +77,13 @@ p {
     position: relative;
 }
 .content1{
-    background: url("333.jpg") no-repeat;
+    background: url("333.jpg");
     background-size: 1350px 900px;
     height: 700px;
     bottom: 97px;
     position: relative;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 h1{
     color: rgb(254, 244, 244);
